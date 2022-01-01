@@ -11,6 +11,7 @@ def run_game():
     bg_color = (230,230,230)
     #game loop
     while True:
-        gf.check_events()
-        gf.update_screen(ai_settings,screen,ship)
+        gf.check_events(ship)
+        gf.init_screen(ai_settings,screen,ship)
+        ship.update()
 run_game()
